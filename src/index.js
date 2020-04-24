@@ -471,7 +471,7 @@ class ProfilePicture extends Component {
         <input
           className={stylesheet["profile-picture__input"]}
           type="file"
-          accept="image/jpg,image/jpeg,image/png,image/bmp,image/gif"
+          accept="image/jpg,image/jpeg,image/png,image/bmp,image/gif, image/xml+svg"
           ref={this.inputFileRef}
           onChange={this.handleFileChange.bind(this)}
         />
