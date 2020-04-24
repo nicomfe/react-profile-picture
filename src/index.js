@@ -381,7 +381,8 @@ class ProfilePicture extends Component {
   }
 
   getData() {
-    return { ...this.state.imageData };
+    const { imageData, file } = this.state
+    return { ...imageData, file };
   }
 
   setImage(image) {
