@@ -72,6 +72,7 @@ class ProfilePicture extends Component {
     state.status = Status.EMPTY;
     state.loadedData = {};
     state.imageData = {};
+    state.file = null;
 
     const photoHelper = this.photoHelperRef.current,
       helperWidth = photoHelper.clientWidth,
