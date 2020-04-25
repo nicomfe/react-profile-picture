@@ -21,7 +21,7 @@ const isDataUrl = s => {
  * @param {number} settings.maxImageSize Minimum desirable image width
  * @param {function} settings.onError Error callback
  * @param {function} settings.onLoad Load callback
- * 
+ *
  */
 const processFile = (imageUrl, settings) => {
   const image = new Image();
@@ -33,7 +33,7 @@ const processFile = (imageUrl, settings) => {
     ...settings
   };
 
-  if (!isDataUrl) image.crossOrigin = "anonymous";
+  image.crossOrigin = "Anonymous";
 
   image.onload = () => {
     let ratio,
