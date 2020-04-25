@@ -5,7 +5,7 @@ import Icon from "../components/Icon/Icon";
 import style from "../components/Message/Message.scss"
 
 const StatusMessage = {
-  [Status.EMPTY]: <p className={style["message__text"]}>Drop your photo here or tap to select.</p>,
+  [Status.EMPTY]: <p className={style["message__text"]}>Drop2 your photo here or tap to select.</p>,
   [Status.LOADING]:<Icon name="loading" size={48}/>,
   [Status.DRAGOVER]: (
     <Fragment>

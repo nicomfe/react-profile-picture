@@ -358,17 +358,32 @@ class ProfilePicture extends Component {
     switch (this.state.status) {
       case Status.EMPTY:
       case Status.INVALID_FILE_TYPE:
-      case Status.INVALID_IMAGE_SIZE:
+      case Status.INVALID_IMAGE_SIZE: {
+        const { messages } = this.props
         return (
           <Message onClick={this.handleTapToSelect.bind(this)}>
-            {StatusMessage[this.state.status]}
+            {messages[this.state.status]
+              ? messages[this.state.status]
+              : StatusMessage[this.state.status]
+            }
           </Message>
         );
+      }
+
       case Status.LOADED:
         return null;
 
-      default:
-        return <Message>{StatusMessage[this.state.status]}</Message>;
+      default: {
+        const { messages } = this.props
+        return (
+          <Message>
+            {messages[this.state.status]
+              ? messages[this.state.status]
+              : StatusMessage[this.state.status]
+            }
+          </Message>
+        );
+      }
     }
   }
 
@@ -498,7 +513,8 @@ ProfilePicture.propTypes = {
   onImageRemoved: PropTypes.func,
   onError: PropTypes.func,
   onZoomChange: PropTypes.func,
-  onStatusChange: PropTypes.func
+  onStatusChange: PropTypes.func,
+  messages: PropTypes.object
 };
 
 ProfilePicture.defaultProps = {
@@ -511,6 +527,7 @@ ProfilePicture.defaultProps = {
   maxImageSize: 1000,
   useHelper: false,
   debug: false,
+  messages: StatusMessage,
   // Callbacks
   onImagePropertiesChange: () => {},
   onImageLoading: () => {},
@@ -520,5 +537,5 @@ ProfilePicture.defaultProps = {
   onStatusChange: () => {},
   onImageRemoved: () => {}
 };
-
+export const STATUS_MESSAGES = Status;
 export default ProfilePicture;
