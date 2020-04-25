@@ -474,6 +474,7 @@ class ProfilePicture extends Component {
                 </div>
                 <div className={stylesheet["options__remove"]}>
                   <button
+                    type="button"
                     className={stylesheet["remove__button"]}
                     onClick={this.handleRemove.bind(this)}
                   >
