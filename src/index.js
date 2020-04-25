@@ -193,6 +193,7 @@ class ProfilePicture extends Component {
   }
 
   handleFileChange(event) {
+    event.preventDefault()
     this.readFile(event.target.files[0]);
     event.target.value = "";
     this.debug("[handleFileChange]", { file: event.target.files[0] });
