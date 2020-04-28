@@ -4,14 +4,14 @@
   "description": "Simple way to change your profile picture",
   "main": "build/index.js",
   "dependencies": {
+    "react": "^16.4.0"
+  },
+  "devDependencies": {
     "css-loader": "^1.0.0",
     "file-loader": "^3.0.1",
     "prop-types": "^15.6.2",
-    "react": "^16.4.0",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1"
-  },
-  "devDependencies": {
+    "style-loader": "^0.23.1",
     "astroturf": "^0.8.4",
     "autoprefixer": "^9.4.7",
     "babel-cli": "^6.26.0",
